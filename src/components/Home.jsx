@@ -32,28 +32,51 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 mt-3">
             {/* Resume Button */}
             <a
-              href="/resume.pdf"
+              href="/"
               className="flex items-center px-7 py-2 border-2 border-blue-500 rounded-lg text-white bg-bgColor hover:bg-gray-600 transition-all duration-300"
             >
               <FaArrowUp className="mr-2 text-md" />
               Resume
             </a>
 
-            {/* Social Icons */}
             <div className="flex space-x-5 text-xl text-gray-400">
-              <a href="mailto:your.email@example.com" className="hover:text-gray-600 transition duration-300">
-                <FaAt />
-              </a>
-              <a href="https://github.com/yourusername" className="hover:text-gray-600 transition duration-300">
-                <FaGithub />
-              </a>
-              <a href="https://linkedin.com/in/yourusername" className="hover:text-gray-600 transition duration-300">
-                <FaLinkedin />
-              </a>
-              <a href="https://www.upwork.com/freelancers/yourusername" className="hover:text-gray-600 transition duration-300">
-                <MdArrowUpward />
-              </a>
-            </div>
+  <a
+    href="mailto:safdartalha69@gmail.com"
+    className="hover:text-gray-600 transition duration-300"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaAt />
+  </a>
+
+  <a
+    href="https://github.com/talha981"
+    className="hover:text-gray-600 transition duration-300"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaGithub />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/ta-lha-1b6a352a4/"
+    className="hover:text-gray-600 transition duration-300"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaLinkedin />
+  </a>
+
+  <a
+    href="/"
+    className="hover:text-gray-600 transition duration-300"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <MdArrowUpward />
+  </a>
+</div>
+
           </div>
 
          

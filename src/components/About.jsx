@@ -12,7 +12,7 @@ const About = () => {
 <div className="flex  items-center mt-40  mb-8">
         <User className="mr-3 text-blue-500" size={32} />
         <h1 className="text-3xl md:text-4xl font-bold border-b-2   border-blue-500 pb-2">About Me</h1>
-      </div>       <p className="text-lg  text-justify leading-relaxed">
+      </div>       <p className="text-md  text-justify leading-relaxed">
         Full Stack Developer with over 4 years of experience building dynamic web and mobile applications using 
         <span className="text-blue-500 font-semibold"> React, React Native,</span> and <span className="text-blue-500 font-semibold">Android</span>. 
         Skilled in creating user-friendly interfaces, developing robust backends, and ensuring seamless performance. 

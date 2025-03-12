@@ -1,13 +1,21 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); // Get current route
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     localStorage.setItem("darkMode", !darkMode); // Save user preference
+  };
+
+  // Function to determine active link style
+  const getLinkClass = (path) => {
+    return location.pathname === path
+      ? "text-blue-500 font-semibold"
+      : "text-gray-300 hover:text-gray-400";
   };
 
   return (
@@ -17,13 +25,15 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       transition-all duration-300 z-50 shadow-md fixed top-0 left-0 w-full`}
     >
       {/* Logo / Signature */}
-      <div className="text-4xl md:text-4xl font-signature text-blue-400">Talha Safdar</div>
+      <div className="text-4xl md:text-4xl font-signature text-blue-400">
+        Talha Safdar
+      </div>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex space-x-6">
-        <Link to="/" className="hover:text-gray-400">Home</Link>
-        <Link to="/about" className="hover:text-gray-400">About</Link>
-        <Link to="/work" className="hover:text-gray-400">Work</Link>
+        <Link to="/" className={getLinkClass("/")}>Home</Link>
+        <Link to="/about" className={getLinkClass("/about")}>About</Link>
+        <Link to="/work" className={getLinkClass("/work")}>Work</Link>
       </div>
 
       {/* Dark Mode Toggle (Mobile) */}
@@ -44,9 +54,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         className={`absolute top-16 left-0 w-full bg-white dark:bg-bgColor shadow-md flex flex-col  
         ${menuOpen ? "block" : "hidden"} md:hidden transition-all duration-300`}
       >
-        <Link to="/" className="py-3 ml-6 hover:text-gray-400" onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link to="/about" className="py-3 ml-6 hover:text-gray-400" onClick={() => setMenuOpen(false)}>About</Link>
-        <Link to="/work" className="py-3 ml-6 hover:text-gray-400" onClick={() => setMenuOpen(false)}>Work</Link>
+        <Link to="/" className={`py-3 ml-6 ${getLinkClass("/")}`} onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/about" className={`py-3 ml-6 ${getLinkClass("/about")}`} onClick={() => setMenuOpen(false)}>About</Link>
+        <Link to="/work" className={`py-3 ml-6 ${getLinkClass("/work")}`} onClick={() => setMenuOpen(false)}>Work</Link>
       </div>
 
       {/* Dark Mode Toggle (Desktop) */}

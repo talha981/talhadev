@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Home from '../components/Home';
 import AboutHome from '../components/AboutHome';
 import TechStackMarquee from '../components/TechStack';
+import Testimonials from '../components/ProjectShowCase';
 
 function HomePage() {
   useEffect(() => {
@@ -12,7 +13,7 @@ function HomePage() {
     <div>
       <Home />
       <AboutHome />
-      <TechStackMarquee />
+<Testimonials/>
     </div>
   );
 }

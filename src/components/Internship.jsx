@@ -42,7 +42,7 @@ const Internships = () => {
         <h1 className="text-3xl md:text-4xl font-bold border-b-2 border-blue-500 pb-2">Internships</h1>
       </div>
       
-      <p className="text-lg text-justify leading-relaxed mb-8">
+      <p className="text-md text-justify leading-relaxed mb-8">
         My internships have provided hands-on experience in full-stack and front-end development, allowing me to apply my technical knowledge in real-world projects.
       </p>
       

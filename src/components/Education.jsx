@@ -51,7 +51,7 @@ const Education = () => {
         <h1 className="text-3xl md:text-4xl font-bold border-b-2 border-blue-500 pb-2">Education</h1>
       </div>
       
-      <p className="text-lg text-justify leading-relaxed mb-8">
+      <p className="text-md text-justify leading-relaxed mb-8">
         My academic journey has equipped me with both theoretical knowledge and practical skills in software engineering, 
         preparing me to tackle real-world challenges in the tech industry.
       </p>
